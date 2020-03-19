@@ -45,11 +45,10 @@ class FirstFragment : Fragment() {
 
     private fun fillLista() {
         val arrayItems: ArrayList<Nota> = ArrayList<Nota>()
-        arrayItems.add(Nota("Nota1", "descricao2", "data"))
-        arrayItems.add(Nota("Nota1", "descricao2", "data"))
-        arrayItems.add(Nota("Nota1", "descricao2", "data"))
+        arrayItems.add(Nota("Nota1", "descricao1", "data"))
+        arrayItems.add(Nota("Nota2", "descricao2", "data"))
+        arrayItems.add(Nota("Nota3", "descricao3", "data"))
         val itemsAdapter = CustomList_Adapter(this.context, arrayItems)
-        //layoutInflater.inflate(R.id.id_lista, ViewGroup, false)
         this.binding.idLista.adapter = itemsAdapter
     }
 
