@@ -1,10 +1,10 @@
-package com.example.cm_android_project
+package com.example.cm_android_project.activities
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.example.cm_android_project.R
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,10 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+
+        fillLista()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -32,8 +30,14 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.editar -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun fillLista() {
+        val listItems = listOf<String>("Nota1", "Nota2")
+        //listItems.adaptor = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
+
     }
 }
